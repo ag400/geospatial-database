@@ -48,4 +48,5 @@ http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt
 http://www.gdal.org/ogr2ogr.html
 
 It should be noted that sometimes, the data were downloaded as a format of geoJson and geodatabase, it could also be directly imported into the PostGIS. However, if you want to use shapefile for the purpose of analysis (e.g spatial join in ArcGIS), you could convert those format into shp file by using ogr2org (instruction seen in the link):
+
 https://morphocode.com/using-ogr2ogr-convert-data-formats-geojson-postgis-esri-geodatabase-shapefiles/
