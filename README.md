@@ -15,9 +15,15 @@ aijing@aijing-X555LAB:~$ sudo apt-get install postgis
 ### log in the postgresql and creat database and extension.
 Login to PostgreSQL shell using the command
 
+### Import and export data using ogr2ogr
+```console
+#here is an example to export a table named temp in the database as a shapefile (ses_index.shp)
+aijing@aijing-X555LAB:~$ ogr2ogr -f "ESRI Shapefile" ses_index.shp PG:"host=localhost user=postgres dbname=ses password=123456" -sql "SELECT * from temp"
+```
 
 ### Backup database by pg_dump
 ```console
 aijing@aijing-X555LAB:~$ pg_dump -U postgres -W -F t ses > home\backup_file.tar
 ```
+
 
