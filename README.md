@@ -31,7 +31,7 @@ SELECT postgis_full_version();
 
 ### Import and export data using ogr2ogr
 ```console
-#import a csv file into the database, built_environment
+#import a csv file (contains GIS) into the database, built_environment
 aijing@aijing-X555LAB:~$ ogr2ogr -f "PostgreSQL" -lco GEOMETRY_NAME=the_geom -lco FID=gid PG:"host=localhost user=postgres dbname=built_environment password=123456" percent_tree_cover.csv -nln mytable
 #here is an example to export a table named percent_tree_cover in the database as a shapefile (tree_cover.shp)
 aijing@aijing-X555LAB:~$ ogr2ogr -f "ESRI Shapefile" tree_cover.shp PG:"host=localhost user=postgres dbname=built_environment password=123456" -sql "SELECT * FROM percent_tree_cover"
@@ -44,7 +44,8 @@ aijing@aijing-X555LAB:~$ pg_dump -U postgres -W -F t ses > home\backup_file.tar
 
 Further details and instructions could be seen in the links:
 http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt
+
 http://www.gdal.org/ogr2ogr.html
 
-It should be noted that sometimes, the data were downloaded as a format of geoJson and geodatabase, it could also be directly imported into the PostGis. However, if you want to use shapefile for the purpose of analysis (e.g spatial join in ArcGIS), you could convert those format into shp file by using ogr2org (instruction seen in the link):
+It should be noted that sometimes, the data were downloaded as a format of geoJson and geodatabase, it could also be directly imported into the PostGIS. However, if you want to use shapefile for the purpose of analysis (e.g spatial join in ArcGIS), you could convert those format into shp file by using ogr2org (instruction seen in the link):
 https://morphocode.com/using-ogr2ogr-convert-data-formats-geojson-postgis-esri-geodatabase-shapefiles/
