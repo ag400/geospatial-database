@@ -17,8 +17,8 @@ Login to PostgreSQL shell using the command
 
 ### Import and export data using ogr2ogr
 ```console
-#here is an example to export a table named temp in the database as a shapefile (ses_index.shp)
-aijing@aijing-X555LAB:~$ ogr2ogr -f "ESRI Shapefile" ses_index.shp PG:"host=localhost user=postgres dbname=ses password=123456" -sql "SELECT * from temp"
+#here is an example to export a table named percent_tree_cover in the database as a shapefile (tree_cover.shp)
+aijing@aijing-X555LAB:~$ ogr2ogr -f "ESRI Shapefile" tree_cover.shp PG:"host=localhost user=postgres dbname=built_environment password=123456" -sql "SELECT * FROM percent_tree_cover"
 ```
 
 ### Backup database by pg_dump
