@@ -14,6 +14,20 @@ aijing@aijing-X555LAB:~$ sudo apt-get install postgis
 ```
 ### log in the postgresql and creat database and extension.
 Login to PostgreSQL shell using the command
+```console
+aijing@aijing-X555LAB:~$ sudo -u postgres psql
+```
+Create a database and enable postgis extension by typing following SQL in PostgreSQL
+```console
+CREATE DATABASE built_environment;
+\connect built_environment;
+
+CREATE SCHEMA postgis;
+ALTER DATABASE built_environment SET search_path=public, postgis, contrib;
+\connect built_environment;  -- this is to force new search path to take effect
+CREATE EXTENSION postgis SCHEMA postgis;
+SELECT postgis_full_version();
+```
 
 ### Import and export data using ogr2ogr
 ```console
