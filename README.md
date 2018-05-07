@@ -17,6 +17,8 @@ Login to PostgreSQL shell using the command
 
 ### Import and export data using ogr2ogr
 ```console
+#import a csv file into the database, built_environment
+aijing@aijing-X555LAB:~$ ogr2ogr -f "PostgreSQL" -lco GEOMETRY_NAME=the_geom -lco FID=gid PG:"host=localhost user=postgres dbname=built_environment password=123456" percent_tree_cover.csv -nln mytable
 #here is an example to export a table named percent_tree_cover in the database as a shapefile (tree_cover.shp)
 aijing@aijing-X555LAB:~$ ogr2ogr -f "ESRI Shapefile" tree_cover.shp PG:"host=localhost user=postgres dbname=built_environment password=123456" -sql "SELECT * FROM percent_tree_cover"
 ```
