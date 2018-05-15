@@ -1,0 +1,142 @@
+1. City Park
+   Column    |            Type             | Collation | Nullable |                Default                 | Storage  | Stats target | Description 
+-------------+-----------------------------+-----------+----------+----------------------------------------+----------+--------------+-------------
+ gid         | integer                     |           | not null | nextval('city_park_gid_seq'::regclass) | plain    |              | 
+ dog_park    | character varying(255)      |           |          |                                        | extended |              | 
+ camping     | character varying(255)      |           |          |                                        | extended |              | 
+ tennis_crt  | character varying(255)      |           |          |                                        | extended |              | 
+ notes       | character varying(255)      |           |          |                                        | extended |              | 
+ tennis_cnt  | character varying(255)      |           |          |                                        | extended |              | 
+ location    | character varying(255)      |           |          |                                        | extended |              | 
+ greenway    | character varying(255)      |           |          |                                        | extended |              | 
+ picnic_tab  | character varying(255)      |           |          |                                        | extended |              | 
+ center_siz  | character varying(255)      |           |          |                                        | extended |              | 
+ picture     | character varying(255)      |           |          |                                        | extended |              | 
+ basketball  | character varying(255)      |           |          |                                        | extended |              | 
+ objectid    | character varying(255)      |           |          |                                        | extended |              | 
+ rec_center  | character varying(255)      |           |          |                                        | extended |              | 
+ yth_baseb   | character varying(255)      |           |          |                                        | extended |              | 
+ playground  | character varying(255)      |           |          |                                        | extended |              | 
+ shapestarea | character varying(255)      |           |          |                                        | extended |              | 
+ shapestleng | character varying(255)      |           |          |                                        | extended |              | 
+ basket_cnt  | character varying(255)      |           |          |                                        | extended |              | 
+ grill       | character varying(255)      |           |          |                                        | extended |              | 
+ adlt_baseb  | character varying(255)      |           |          |                                        | extended |              | 
+ table_cnt   | character varying(255)      |           |          |                                        | extended |              | 
+ zip         | character varying(255)      |           |          |                                        | extended |              | 
+ adlt_softb  | character varying(255)      |           |          |                                        | extended |              | 
+ legacyid    | character varying(255)      |           |          |                                        | extended |              | 
+ acres       | character varying(255)      |           |          |                                        | extended |              | 
+ boating     | character varying(255)      |           |          |                                        | extended |              | 
+ shape_leng  | character varying(255)      |           |          |                                        | extended |              | 
+ disc_golf   | character varying(255)      |           |          |                                        | extended |              | 
+ athl_field  | character varying(255)      |           |          |                                        | extended |              | 
+ name        | character varying(255)      |           |          |                                        | extended |              | 
+ district    | character varying(255)      |           |          |                                        | extended |              | 
+ spray_grnd  | character varying(255)      |           |          |                                        | extended |              | 
+ shelter     | character varying(255)      |           |          |                                        | extended |              | 
+ shelter_si  | character varying(255)      |           |          |                                        | extended |              | 
+ water       | character varying(255)      |           |          |                                        | extended |              | 
+ lights      | character varying(255)      |           |          |                                        | extended |              | 
+ cw_id       | character varying(255)      |           |          |                                        | extended |              | 
+ fishing     | character varying(255)      |           |          |                                        | extended |              | 
+ address     | character varying(255)      |           |          |                                        | extended |              | 
+ park_name   | character varying(255)      |           |          |                                        | extended |              | 
+ grill_cnt   | character varying(255)      |           |          |                                        | extended |              | 
+ geom        | geometry(MultiPolygon,4269) |           |          |                                        | main     |              | 
+Indexes:
+    "city_park_pkey" PRIMARY KEY, btree (gid)
+    "city_park_geom_idx" gist (geom)
+
+2. Durham_highways
+                                                              Table "public.durham_highways"
+   Column    |              Type              | Collation | Nullable |                   Default                    | Storage  | Stats target | Description 
+-------------+--------------------------------+-----------+----------+----------------------------------------------+----------+--------------+-------------
+ gid         | integer                        |           | not null | nextval('durham_highways_gid_seq'::regclass) | plain    |              | 
+ fnode       | numeric                        |           |          |                                              | main     |              | 
+ tnode       | numeric                        |           |          |                                              | main     |              | 
+ lpoly       | numeric                        |           |          |                                              | main     |              | 
+ rpoly       | numeric                        |           |          |                                              | main     |              | 
+ length      | numeric                        |           |          |                                              | main     |              | 
+ roads       | numeric                        |           |          |                                              | main     |              | 
+ roads_id    | numeric                        |           |          |                                              | main     |              | 
+ itre_id     | numeric                        |           |          |                                              | main     |              | 
+ mslink      | numeric                        |           |          |                                              | main     |              | 
+ road_pre    | character varying(255)         |           |          |                                              | extended |              | 
+ road_name   | character varying(255)         |           |          |                                              | extended |              | 
+ road_type   | character varying(255)         |           |          |                                              | extended |              | 
+ road_suf    | character varying(255)         |           |          |                                              | extended |              | 
+ stname      | character varying(255)         |           |          |                                              | extended |              | 
+ strname     | character varying(255)         |           |          |                                              | extended |              | 
+ alias       | character varying(255)         |           |          |                                              | extended |              | 
+ alias2      | character varying(255)         |           |          |                                              | extended |              | 
+ ftr_code    | character varying(255)         |           |          |                                              | extended |              | 
+ recnum      | numeric                        |           |          |                                              | main     |              | 
+ add_lo_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ add_hi_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ add_lo_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ add_hi_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_lo_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_hi_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_lo_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_hi_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ comments    | character varying(255)         |           |          |                                              | extended |              | 
+ er_route_i  | character varying(255)         |           |          |                                              | extended |              | 
+ symbol      | numeric                        |           |          |                                              | main     |              | 
+ road_pre2   | character varying(255)         |           |          |                                              | extended |              | 
+ sr_num      | character varying(255)         |           |          |                                              | extended |              | 
+ editdate    | character varying(255)         |           |          |                                              | extended |              | 
+ cityaccptd  | character varying(255)         |           |          |                                              | extended |              | 
+ pwtype      | character varying(255)         |           |          |                                              | extended |              | 
+ feature_id  | numeric                        |           |          |                                              | main     |              | 
+ facility_i  | character varying(255)         |           |          |                                              | extended |              | 
+ developmen  | character varying(255)         |           |          |                                              | extended |              | 
+ shape_fid   | numeric                        |           |          |                                              | main     |              | 
+ highwaynumb | numeric                        |           |          |                                              | main     |              | 
+ hwynumber   | character varying(255)         |           |          |                                              | extended |              | 
+ shape_stlen | numeric                        |           |          |                                              | main     |              | 
+ geom        | geometry(MultiLineString,4269) |           |          |                                              | main     |              | 
+Indexes:
+    "durham_highways_pkey" PRIMARY KEY, btree (gid)
+    "durham_highways_geom_idx" gist (geom)
+
+3. Food desert (https://www.ers.usda.gov/data/fooddesert/)
+                                           Table "public.food_desert"
+        Column        |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description 
+----------------------+------------------+-----------+----------+---------+----------+--------------+-------------
+ row.names            | text             |           |          |         | extended |              | 
+ CensusTract          | text             |           |          |         | extended |              | 
+ State                | text             |           |          |         | extended |              | 
+ County               | text             |           |          |         | extended |              | 
+ Urban                | integer          |           |          |         | plain    |              | 
+ POP2010              | integer          |           |          |         | plain    |              | 
+ OHU2010              | integer          |           |          |         | plain    |              | 
+ GroupQuartersFlag    | integer          |           |          |         | plain    |              | 
+ NUMGQTRS             | integer          |           |          |         | plain    |              | 
+ PCTGQTRS             | double precision |           |          |         | plain    |              | 
+ LILATracts_1And10    | integer          |           |          |         | plain    |              | 
+ LILATracts_halfAnd10 | integer          |           |          |         | plain    |              | 
+ LILATracts_1And20    | integer          |           |          |         | plain    |              | 
+ LILATracts_Vehicle   | integer          |           |          |         | plain    |              | 
+ HUNVFlag             | integer          |           |          |         | plain    |              | 
+ LowIncomeTracts      | integer          |           |          |         | plain    |              | 
+ PovertyRate          | double precision |           |          |         | plain    |              | 
+ MedianFamilyIncome   | integer          |           |          |         | plain    |              | 
+ LA1and10             | integer          |           |          |         | plain    |              | 
+ LAhalfand10          | integer          |           |          |         | plain    |              | 
+ LA1and20             | integer          |           |          |         | plain    |              | 
+ LATracts_half        | integer          |           |          |         | plain    |              | 
+ LATracts1            | integer          |           |          |         | plain    |              | 
+ LATracts10           | integer          |           |          |         | plain    |              | 
+ LATracts20           | integer          |           |          |         | plain    |              | 
+ LATractsVehicle_20   | integer          |           |          |         | plain    |              | 
+ LAPOP1_10            | double precision |           |          |         | plain    |              | 
+ LAPOP05_10           | double precision |           |          |         | plain    |              | 
+ LAPOP1_20            | double precision |           |          |         | plain    |              | 
+ LALOWI1_10           | double precision |           |          |         | plain    |              | 
+ LALOWI05_10          | double precision |           |          |         | plain    |              | 
+ LALOWI1_20           | double precision |           |          |         | plain    |              | 
+ lapophalf            | double precision |           |          |         | plain    |              | 
+
+4. Indoor Air quality (https://www.epa.gov/indoor-air-quality-iaq/overview-building-assessment-survey-and-evaluation-study#Dataset)
+
