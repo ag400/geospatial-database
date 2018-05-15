@@ -1,0 +1,456 @@
+1. City Park (https://opendurham.nc.gov/explore/dataset/city-parks/)
+   Column    |            Type             | Collation | Nullable |                Default                 | Storage  | Stats target | Description 
+-------------+-----------------------------+-----------+----------+----------------------------------------+----------+--------------+-------------
+ gid         | integer                     |           | not null | nextval('city_park_gid_seq'::regclass) | plain    |              | 
+ dog_park    | character varying(255)      |           |          |                                        | extended |              | 
+ camping     | character varying(255)      |           |          |                                        | extended |              | 
+ tennis_crt  | character varying(255)      |           |          |                                        | extended |              | 
+ notes       | character varying(255)      |           |          |                                        | extended |              | 
+ tennis_cnt  | character varying(255)      |           |          |                                        | extended |              | 
+ location    | character varying(255)      |           |          |                                        | extended |              | 
+ greenway    | character varying(255)      |           |          |                                        | extended |              | 
+ picnic_tab  | character varying(255)      |           |          |                                        | extended |              | 
+ center_siz  | character varying(255)      |           |          |                                        | extended |              | 
+ picture     | character varying(255)      |           |          |                                        | extended |              | 
+ basketball  | character varying(255)      |           |          |                                        | extended |              | 
+ objectid    | character varying(255)      |           |          |                                        | extended |              | 
+ rec_center  | character varying(255)      |           |          |                                        | extended |              | 
+ yth_baseb   | character varying(255)      |           |          |                                        | extended |              | 
+ playground  | character varying(255)      |           |          |                                        | extended |              | 
+ shapestarea | character varying(255)      |           |          |                                        | extended |              | 
+ shapestleng | character varying(255)      |           |          |                                        | extended |              | 
+ basket_cnt  | character varying(255)      |           |          |                                        | extended |              | 
+ grill       | character varying(255)      |           |          |                                        | extended |              | 
+ adlt_baseb  | character varying(255)      |           |          |                                        | extended |              | 
+ table_cnt   | character varying(255)      |           |          |                                        | extended |              | 
+ zip         | character varying(255)      |           |          |                                        | extended |              | 
+ adlt_softb  | character varying(255)      |           |          |                                        | extended |              | 
+ legacyid    | character varying(255)      |           |          |                                        | extended |              | 
+ acres       | character varying(255)      |           |          |                                        | extended |              | 
+ boating     | character varying(255)      |           |          |                                        | extended |              | 
+ shape_leng  | character varying(255)      |           |          |                                        | extended |              | 
+ disc_golf   | character varying(255)      |           |          |                                        | extended |              | 
+ athl_field  | character varying(255)      |           |          |                                        | extended |              | 
+ name        | character varying(255)      |           |          |                                        | extended |              | 
+ district    | character varying(255)      |           |          |                                        | extended |              | 
+ spray_grnd  | character varying(255)      |           |          |                                        | extended |              | 
+ shelter     | character varying(255)      |           |          |                                        | extended |              | 
+ shelter_si  | character varying(255)      |           |          |                                        | extended |              | 
+ water       | character varying(255)      |           |          |                                        | extended |              | 
+ lights      | character varying(255)      |           |          |                                        | extended |              | 
+ cw_id       | character varying(255)      |           |          |                                        | extended |              | 
+ fishing     | character varying(255)      |           |          |                                        | extended |              | 
+ address     | character varying(255)      |           |          |                                        | extended |              | 
+ park_name   | character varying(255)      |           |          |                                        | extended |              | 
+ grill_cnt   | character varying(255)      |           |          |                                        | extended |              | 
+ geom        | geometry(MultiPolygon,4269) |           |          |                                        | main     |              | 
+Indexes:
+    "city_park_pkey" PRIMARY KEY, btree (gid)
+    "city_park_geom_idx" gist (geom)
+
+2. Durham_highways (https://opendurham.nc.gov/explore/dataset/durham-highways3/)
+                                                              Table "public.durham_highways"
+   Column    |              Type              | Collation | Nullable |                   Default                    | Storage  | Stats target | Description 
+-------------+--------------------------------+-----------+----------+----------------------------------------------+----------+--------------+-------------
+ gid         | integer                        |           | not null | nextval('durham_highways_gid_seq'::regclass) | plain    |              | 
+ fnode       | numeric                        |           |          |                                              | main     |              | 
+ tnode       | numeric                        |           |          |                                              | main     |              | 
+ lpoly       | numeric                        |           |          |                                              | main     |              | 
+ rpoly       | numeric                        |           |          |                                              | main     |              | 
+ length      | numeric                        |           |          |                                              | main     |              | 
+ roads       | numeric                        |           |          |                                              | main     |              | 
+ roads_id    | numeric                        |           |          |                                              | main     |              | 
+ itre_id     | numeric                        |           |          |                                              | main     |              | 
+ mslink      | numeric                        |           |          |                                              | main     |              | 
+ road_pre    | character varying(255)         |           |          |                                              | extended |              | 
+ road_name   | character varying(255)         |           |          |                                              | extended |              | 
+ road_type   | character varying(255)         |           |          |                                              | extended |              | 
+ road_suf    | character varying(255)         |           |          |                                              | extended |              | 
+ stname      | character varying(255)         |           |          |                                              | extended |              | 
+ strname     | character varying(255)         |           |          |                                              | extended |              | 
+ alias       | character varying(255)         |           |          |                                              | extended |              | 
+ alias2      | character varying(255)         |           |          |                                              | extended |              | 
+ ftr_code    | character varying(255)         |           |          |                                              | extended |              | 
+ recnum      | numeric                        |           |          |                                              | main     |              | 
+ add_lo_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ add_hi_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ add_lo_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ add_hi_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_lo_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_hi_odd  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_lo_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ blk_hi_eve  | character varying(255)         |           |          |                                              | extended |              | 
+ comments    | character varying(255)         |           |          |                                              | extended |              | 
+ er_route_i  | character varying(255)         |           |          |                                              | extended |              | 
+ symbol      | numeric                        |           |          |                                              | main     |              | 
+ road_pre2   | character varying(255)         |           |          |                                              | extended |              | 
+ sr_num      | character varying(255)         |           |          |                                              | extended |              | 
+ editdate    | character varying(255)         |           |          |                                              | extended |              | 
+ cityaccptd  | character varying(255)         |           |          |                                              | extended |              | 
+ pwtype      | character varying(255)         |           |          |                                              | extended |              | 
+ feature_id  | numeric                        |           |          |                                              | main     |              | 
+ facility_i  | character varying(255)         |           |          |                                              | extended |              | 
+ developmen  | character varying(255)         |           |          |                                              | extended |              | 
+ shape_fid   | numeric                        |           |          |                                              | main     |              | 
+ highwaynumb | numeric                        |           |          |                                              | main     |              | 
+ hwynumber   | character varying(255)         |           |          |                                              | extended |              | 
+ shape_stlen | numeric                        |           |          |                                              | main     |              | 
+ geom        | geometry(MultiLineString,4269) |           |          |                                              | main     |              | 
+Indexes:
+    "durham_highways_pkey" PRIMARY KEY, btree (gid)
+    "durham_highways_geom_idx" gist (geom)
+
+3. Food desert (https://www.ers.usda.gov/data/fooddesert/)
+                                           Table "public.food_desert"
+        Column        |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description 
+----------------------+------------------+-----------+----------+---------+----------+--------------+-------------
+ row.names            | text             |           |          |         | extended |              | 
+ CensusTract          | text             |           |          |         | extended |              | 
+ State                | text             |           |          |         | extended |              | 
+ County               | text             |           |          |         | extended |              | 
+ Urban                | integer          |           |          |         | plain    |              | 
+ POP2010              | integer          |           |          |         | plain    |              | 
+ OHU2010              | integer          |           |          |         | plain    |              | 
+ GroupQuartersFlag    | integer          |           |          |         | plain    |              | 
+ NUMGQTRS             | integer          |           |          |         | plain    |              | 
+ PCTGQTRS             | double precision |           |          |         | plain    |              | 
+ LILATracts_1And10    | integer          |           |          |         | plain    |              | 
+ LILATracts_halfAnd10 | integer          |           |          |         | plain    |              | 
+ LILATracts_1And20    | integer          |           |          |         | plain    |              | 
+ LILATracts_Vehicle   | integer          |           |          |         | plain    |              | 
+ HUNVFlag             | integer          |           |          |         | plain    |              | 
+ LowIncomeTracts      | integer          |           |          |         | plain    |              | 
+ PovertyRate          | double precision |           |          |         | plain    |              | 
+ MedianFamilyIncome   | integer          |           |          |         | plain    |              | 
+ LA1and10             | integer          |           |          |         | plain    |              | 
+ LAhalfand10          | integer          |           |          |         | plain    |              | 
+ LA1and20             | integer          |           |          |         | plain    |              | 
+ LATracts_half        | integer          |           |          |         | plain    |              | 
+ LATracts1            | integer          |           |          |         | plain    |              | 
+ LATracts10           | integer          |           |          |         | plain    |              | 
+ LATracts20           | integer          |           |          |         | plain    |              | 
+ LATractsVehicle_20   | integer          |           |          |         | plain    |              | 
+ LAPOP1_10            | double precision |           |          |         | plain    |              | 
+ LAPOP05_10           | double precision |           |          |         | plain    |              | 
+ LAPOP1_20            | double precision |           |          |         | plain    |              | 
+ LALOWI1_10           | double precision |           |          |         | plain    |              | 
+ LALOWI05_10          | double precision |           |          |         | plain    |              | 
+ LALOWI1_20           | double precision |           |          |         | plain    |              | 
+ lapophalf            | double precision |           |          |         | plain    |              | 
+
+4. Indoor Air quality (https://www.epa.gov/indoor-air-quality-iaq/overview-building-assessment-survey-and-evaluation-study#Dataset)
+5. Eviction (https://evictionlab.org/)
+                                                             Table "public.eviction"
+    Column    |          Type           | Collation | Nullable |                  Default                  | Storage  | Stats target | Description 
+--------------+-------------------------+-----------+----------+-------------------------------------------+----------+--------------+-------------
+ ogc_fid      | integer                 |           | not null | nextval('eviction_ogc_fid_seq'::regclass) | plain    |              | 
+ geoid        | character varying       |           |          |                                           | extended |              | 
+ west         | double precision        |           |          |                                           | plain    |              | 
+ south        | double precision        |           |          |                                           | plain    |              | 
+ east         | double precision        |           |          |                                           | plain    |              | 
+ north        | double precision        |           |          |                                           | plain    |              | 
+ n            | character varying       |           |          |                                           | extended |              | 
+ pl           | character varying       |           |          |                                           | extended |              | 
+ p_00         | double precision        |           |          |                                           | plain    |              | 
+ pr_00        | double precision        |           |          |                                           | plain    |              | 
+ pro_00       | double precision        |           |          |                                           | plain    |              | 
+ mgr_00       | double precision        |           |          |                                           | plain    |              | 
+ mhi_00       | double precision        |           |          |                                           | plain    |              | 
+ mpv_00       | double precision        |           |          |                                           | plain    |              | 
+ rb_00        | double precision        |           |          |                                           | plain    |              | 
+ pw_00        | double precision        |           |          |                                           | plain    |              | 
+ paa_00       | double precision        |           |          |                                           | plain    |              | 
+ ph_00        | double precision        |           |          |                                           | plain    |              | 
+ pai_00       | double precision        |           |          |                                           | plain    |              | 
+ pa_00        | double precision        |           |          |                                           | plain    |              | 
+ pnp_00       | double precision        |           |          |                                           | plain    |              | 
+ pm_00        | double precision        |           |          |                                           | plain    |              | 
+ po_00        | double precision        |           |          |                                           | plain    |              | 
+ roh_00       | double precision        |           |          |                                           | plain    |              | 
+ ef_00        | double precision        |           |          |                                           | plain    |              | 
+ e_00         | double precision        |           |          |                                           | plain    |              | 
+ er_00        | double precision        |           |          |                                           | plain    |              | 
+ efr_00       | double precision        |           |          |                                           | plain    |              | 
+ imputed_00   | double precision        |           |          |                                           | plain    |              | 
+ subbed_00    | double precision        |           |          |                                           | plain    |              | 
+ p_01         | double precision        |           |          |                                           | plain    |              | 
+ pr_01        | double precision        |           |          |                                           | plain    |              | 
+ pro_01       | double precision        |           |          |                                           | plain    |              | 
+ mgr_01       | double precision        |           |          |                                           | plain    |              | 
+ mhi_01       | double precision        |           |          |                                           | plain    |              | 
+ mpv_01       | double precision        |           |          |                                           | plain    |              | 
+ rb_01        | double precision        |           |          |                                           | plain    |              | 
+ pw_01        | double precision        |           |          |                                           | plain    |              | 
+ paa_01       | double precision        |           |          |                                           | plain    |              | 
+ ph_01        | double precision        |           |          |                                           | plain    |              | 
+ pai_01       | double precision        |           |          |                                           | plain    |              | 
+ pa_01        | double precision        |           |          |                                           | plain    |              | 
+ pnp_01       | double precision        |           |          |                                           | plain    |              | 
+ pm_01        | double precision        |           |          |                                           | plain    |              | 
+ po_01        | double precision        |           |          |                                           | plain    |              | 
+ roh_01       | double precision        |           |          |                                           | plain    |              | 
+ ef_01        | double precision        |           |          |                                           | plain    |              | 
+
+6. Outdoor Air Quality Index (daily AQI values for a durham-chapel hill region from 2009 to 2018.)
+https://www.epa.gov/outdoor-air-quality-data/air-data-multiyear-tile-plot
+                                   Table "public.AQI_durham"
+     Column     | Type | Collation | Nullable | Default | Storage  | Stats target | Description 
+----------------+------+-----------+----------+---------+----------+--------------+-------------
+ row.names      | text |           |          |         | extended |              | 
+ Date           | text |           |          |         | extended |              | 
+ Main Pollutant | text |           |          |         | extended |              | 
+ Site Name      | text |           |          |         | extended |              | 
+ Site ID        | text |           |          |         | extended |              | 
+  AQI Value     | text |           |          |         | extended |              | 
+
+7. American Community Survey 2010 and 2015 (https://www.census.gov/acs/www/data/data-tables-and-tools/)
+
+Due to the limit of fields for each table (less than 1500), I transposed the table. Each column represents a census tract ID. Please transpose it back 
+when you use it.
+                              Table "public.ACS_2010_durham"
+   Column    | Type | Collation | Nullable | Default | Storage  | Stats target | Description 
+-------------+------+-----------+----------+---------+----------+--------------+-------------
+ row.names   | text |           |          |         | extended |              | 
+ 37063000101 | text |           |          |         | extended |              | 
+ 37063000102 | text |           |          |         | extended |              | 
+ 37063000200 | text |           |          |         | extended |              | 
+ 37063000301 | text |           |          |         | extended |              | 
+ 37063000302 | text |           |          |         | extended |              | 
+ 37063000401 | text |           |          |         | extended |              | 
+ 37063000402 | text |           |          |         | extended |              | 
+ 37063000500 | text |           |          |         | extended |              | 
+ 37063000600 | text |           |          |         | extended |              | 
+ 37063000700 | text |           |          |         | extended |              | 
+ 37063000900 | text |           |          |         | extended |              | 
+ 37063001001 | text |           |          |         | extended |              | 
+ 37063001002 | text |           |          |         | extended |              | 
+ 37063001100 | text |           |          |         | extended |              | 
+ 37063001301 | text |           |          |         | extended |              | 
+ 37063001303 | text |           |          |         | extended |              | 
+ 37063001304 | text |           |          |         | extended |              | 
+ 37063001400 | text |           |          |         | extended |              | 
+ 37063001501 | text |           |          |         | extended |              | 
+ 37063001502 | text |           |          |         | extended |              | 
+ 37063001503 | text |           |          |         | extended |              | 
+ 37063001601 | text |           |          |         | extended |              | 
+ 37063001603 | text |           |          |         | extended |              | 
+ 37063001604 | text |           |          |         | extended |              | 
+ 37063001705 | text |           |          |         | extended |              | 
+ 37063001706 | text |           |          |         | extended |              | 
+ 37063001707 | text |           |          |         | extended |              | 
+ 37063001708 | text |           |          |         | extended |              | 
+ 37063001709 | text |           |          |         | extended |              | 
+ 37063001710 | text |           |          |         | extended |              | 
+ 37063001711 | text |           |          |         | extended |              | 
+ 37063001801 | text |           |          |         | extended |              | 
+ 37063001802 | text |           |          |         | extended |              | 
+ 37063001806 | text |           |          |         | extended |              | 
+ 37063001807 | text |           |          |         | extended |              | 
+ 37063001808 | text |           |          |         | extended |              | 
+ 37063001809 | text |           |          |         | extended |              | 
+ 37063001900 | text |           |          |         | extended |              | 
+ 37063002007 | text |           |          |         | extended |              | 
+ 37063002008 | text |           |          |         | extended |              | 
+ 37063002009 | text |           |          |         | extended |              | 
+ 37063002013 | text |           |          |         | extended |              | 
+ 37063002015 | text |           |          |         | extended |              | 
+ 37063002016 | text |           |          |         | extended |              | 
+ 37063002017 | text |           |          |         | extended |              | 
+ 37063002018 | text |           |          |         | extended |              | 
+ 37063002019 | text |           |          |         | extended |              | 
+ 37063002020 | text |           |          |         | extended |              | 
+ 37063002021 | text |           |          |         | extended |              | 
+ 37063002022 | text |           |          |         | extended |              | 
+ 37063002023 | text |           |          |         | extended |              | 
+ 37063002024 | text |           |          |         | extended |              | 
+ 37063002025 | text |           |          |         | extended |              | 
+ 37063002026 | text |           |          |         | extended |              | 
+ 37063002027 | text |           |          |         | extended |              | 
+ 37063002028 | text |           |          |         | extended |              | 
+ 37063002100 | text |           |          |         | extended |              | 
+
+8.Percent tree cover for durham county (https://catalog.data.gov/dataset/enviroatlas-durham-nc-estimated-percent-tree-cover-along-walkable-roads).
+                                                                Table "public.enviroatlas"
+      Column      |            Type             | Collation | Nullable |                 Default                  | Storage  | Stats target | Description 
+------------------+-----------------------------+-----------+----------+------------------------------------------+----------+--------------+-------------
+ gid              | integer                     |           | not null | nextval('enviroatlas_gid_seq'::regclass) | plain    |              | 
+ objectid         | numeric                     |           |          |                                          | main     |              | 
+ state_fips       | character varying(255)      |           |          |                                          | extended |              | 
+ county_fips      | character varying(255)      |           |          |                                          | extended |              | 
+ tract_fips       | character varying(255)      |           |          |                                          | extended |              | 
+ block_group      | character varying(255)      |           |          |                                          | extended |              | 
+ enviroatlas      | character varying(255)      |           |          |                                          | extended |              | 
+ enviroatlas__6   | character varying(255)      |           |          |                                          | extended |              | 
+ value_of_ho      | numeric                     |           |          |                                          | main     |              | 
+ asthma_exac      | numeric                     |           |          |                                          | main     |              | 
+ value_of_as      | numeric                     |           |          |                                          | main     |              | 
+ acute_respi      | numeric                     |           |          |                                          | main     |              | 
+ value_of_mo      | numeric                     |           |          |                                          | main     |              | 
+ school_days      | numeric                     |           |          |                                          | main     |              | 
+ value_of_sc      | numeric                     |           |          |                                          | main     |              | 
+ acute_respi__14  | numeric                     |           |          |                                          | main     |              | 
+ value_of_mo__15  | numeric                     |           |          |                                          | main     |              | 
+ asthma_exac__16  | numeric                     |           |          |                                          | main     |              | 
+ value_of_as__17  | numeric                     |           |          |                                          | main     |              | 
+ value_of_ho__18  | numeric                     |           |          |                                          | main     |              | 
+ total_popul      | numeric                     |           |          |                                          | main     |              | 
+ population_      | numeric                     |           |          |                                          | main     |              | 
+ percent_pop      | numeric                     |           |          |                                          | main     |              | 
+ population___22  | numeric                     |           |          |                                          | main     |              | 
+ percent_pop__23  | numeric                     |           |          |                                          | main     |              | 
+ population___24  | numeric                     |           |          |                                          | main     |              | 
+ percent_pop__25  | numeric                     |           |          |                                          | main     |              | 
+ population___26  | numeric                     |           |          |                                          | main     |              | 
+ percent_pop__27  | numeric                     |           |          |                                          | main     |              | 
+ population___28  | numeric                     |           |          |                                          | main     |              | 
+ percent_pop__29  | numeric                     |           |          |                                          | main     |              | 
+ block_group__30  | character varying(255)      |           |          |                                          | extended |              | 
+ number_of_d      | numeric                     |           |          |                                          | main     |              | 
+ day_care_ce      | numeric                     |           |          |                                          | main     |              | 
+ number_of_s      | numeric                     |           |          |                                          | main     |              | 
+ k_12_school      | numeric                     |           |          |                                          | main     |              | 
+ total_carbo      | numeric                     |           |          |                                          | main     |              | 
+ total_carbo__36  | numeric                     |           |          |                                          | main     |              | 
+ value_of_ca      | numeric                     |           |          |                                          | main     |              | 
+ value_of_ca__38  | numeric                     |           |          |                                          | main     |              | 
+ average_red      | numeric                     |           |          |                                          | main     |              | 
+ average_red__40  | numeric                     |           |          |                                          | main     |              | 
+ carbon_mono      | numeric                     |           |          |                                          | main     |              | 
+ nitrogen_di      | numeric                     |           |          |                                          | main     |              | 
+ ozone_kg_yr      | numeric                     |           |          |                                          | main     |              | 
+ particulate      | numeric                     |           |          |                                          | main     |              | 
+ sulfur_diox      | numeric                     |           |          |                                          | main     |              | 
+ particulate__46  | numeric                     |           |          |                                          | main     |              | 
+ value_of_he      | numeric                     |           |          |                                          | main     |              | 
+ value_of_he__48  | numeric                     |           |          |                                          | main     |              | 
+ percent_red      | numeric                     |           |          |                                          | main     |              | 
+ reduction_i      | numeric                     |           |          |                                          | main     |              | 
+ reduction_i__51  | numeric                     |           |          |                                          | main     |              | 
+ reduction_i__52  | numeric                     |           |          |                                          | main     |              | 
+ reduction_i__53  | numeric                     |           |          |                                          | main     |              | 
+ reduction_i__54  | numeric                     |           |          |                                          | main     |              | 
+ reduction_i__55  | numeric                     |           |          |                                          | main     |              | 
+ reduction_i__56  | numeric                     |           |          |                                          | main     |              | 
+
+9. Restaurants (https://opendurham.nc.gov/explore/dataset/restaurants-data/?disjunctive.opening_date)
+                                                    Table "public.restaurant"
+     Column     |          Type          | Collation | Nullable |                 Default                 | Storage  | Stats target | Description 
+----------------+------------------------+-----------+----------+-----------------------------------------+----------+--------------+-------------
+ gid            | integer                |           | not null | nextval('restaurant_gid_seq'::regclass) | plain    |              | 
+ id             | character varying(255) |           |          |                                         | extended |              | 
+ premise_nam    | character varying(255) |           |          |                                         | extended |              | 
+ premise_add    | character varying(255) |           |          |                                         | extended |              | 
+ premise_add__3 | character varying(255) |           |          |                                         | extended |              | 
+ premise_cit    | character varying(255) |           |          |                                         | extended |              | 
+ premise_sta    | character varying(255) |           |          |                                         | extended |              | 
+ premise_zip    | character varying(255) |           |          |                                         | extended |              | 
+ premise_pho    | character varying(255) |           |          |                                         | extended |              | 
+ hours_of_op    | character varying(255) |           |          |                                         | extended |              | 
+ opening_dat    | date                   |           |          |                                         | plain    |              | 
+ closing_dat    | character varying(255) |           |          |                                         | extended |              | 
+ seats          | numeric                |           |          |                                         | main     |              | 
+ water          | character varying(255) |           |          |                                         | extended |              | 
+ sewage         | character varying(255) |           |          |                                         | extended |              | 
+ insp_freq      | numeric                |           |          |                                         | main     |              | 
+ est_group_d    | character varying(255) |           |          |                                         | extended |              | 
+ risk           | numeric                |           |          |                                         | main     |              | 
+ smoking_all    | character varying(255) |           |          |                                         | extended |              | 
+ type_descri    | character varying(255) |           |          |                                         | extended |              | 
+ rpt_area_de    | character varying(255) |           |          |                                         | extended |              | 
+ status         | character varying(255) |           |          |                                         | extended |              | 
+ transitiona    | character varying(255) |           |          |                                         | extended |              | 
+ geom           | geometry(Point,4269)   |           |          |                                         | main     |              | 
+Indexes:
+    "restaurant_pkey" PRIMARY KEY, btree (gid)
+    "restaurant_geom_idx" gist (geom)
+
+10. durham_police_crime_reports (https://opendurham.nc.gov/explore/dataset/durham-police-crime-reports/)
+                                                              Table "public.durham_police_crime_reports"
+    Column    |           Type           | Collation | Nullable |                           Default                            | Storage  | Stats target | Description 
+--------------+--------------------------+-----------+----------+--------------------------------------------------------------+----------+--------------+-------------
+ ogc_fid      | integer                  |           | not null | nextval('durham_police_crime_reports_ogc_fid_seq'::regclass) | plain    |              | 
+ dist         | character varying        |           |          |                                                              | extended |              | 
+ reportedas   | character varying        |           |          |                                                              | extended |              | 
+ inci_id      | character varying        |           |          |                                                              | extended |              | 
+ csstatusdt   | timestamp with time zone |           |          |                                                              | plain    |              | 
+ hour_rept    | character varying        |           |          |                                                              | extended |              | 
+ ucr_type_o   | character varying        |           |          |                                                              | extended |              | 
+ monthstamp   | character varying        |           |          |                                                              | extended |              | 
+ reviewdate   | timestamp with time zone |           |          |                                                              | plain    |              | 
+ csstatus     | character varying        |           |          |                                                              | extended |              | 
+ addtime      | timestamp with time zone |           |          |                                                              | plain    |              | 
+ ucr_code     | character varying        |           |          |                                                              | extended |              | 
+ big_zone     | character varying        |           |          |                                                              | extended |              | 
+ dow2         | character varying        |           |          |                                                              | extended |              | 
+ dow1         | character varying        |           |          |                                                              | extended |              | 
+ date_rept    | timestamp with time zone |           |          |                                                              | plain    |              | 
+ date_occu    | timestamp with time zone |           |          |                                                              | plain    |              | 
+ chrgdesc     | character varying        |           |          |                                                              | extended |              | 
+ date_fnd     | timestamp with time zone |           |          |                                                              | plain    |              | 
+ yearstamp    | character varying        |           |          |                                                              | extended |              | 
+ geo_point_2d | double precision[]       |           |          |                                                              | extended |              | 
+ strdate      | date                     |           |          |                                                              | plain    |              | 
+ hour_occu    | character varying        |           |          |                                                              | extended |              | 
+ hour_fnd     | character varying        |           |          |                                                              | extended |              | 
+ wkb_geometry | geometry(Point,4326)     |           |          |                                                              | main     |              | 
+Indexes:
+    "durham_police_crime_reports_pkey" PRIMARY KEY, btree (ogc_fid)
+    "durham_police_crime_reports_wkb_geometry_geom_idx" gist (wkb_geometry)
+
+11. walkability index (https://catalog.data.gov/dataset/walkability-index)
+                                                             Table "public.walkability_index"
+   Column   |            Type             | Collation | Nullable |                    Default                     | Storage  | Stats target | Description 
+------------+-----------------------------+-----------+----------+------------------------------------------------+----------+--------------+-------------
+ gid        | integer                     |           | not null | nextval('walkability_index_gid_seq'::regclass) | plain    |              | 
+ geoid10    | character varying(12)       |           |          |                                                | extended |              | 
+ trfips     | character varying(254)      |           |          |                                                | extended |              | 
+ cfips      | character varying(254)      |           |          |                                                | extended |              | 
+ sfips      | character varying(254)      |           |          |                                                | extended |              | 
+ csa        | character varying(254)      |           |          |                                                | extended |              | 
+ csa_name   | character varying(254)      |           |          |                                                | extended |              | 
+ cbsa       | numeric                     |           |          |                                                | main     |              | 
+ cbsa_name  | character varying(254)      |           |          |                                                | extended |              | 
+ counthu10  | numeric                     |           |          |                                                | main     |              | 
+ totpop10   | numeric                     |           |          |                                                | main     |              | 
+ hh         | numeric                     |           |          |                                                | main     |              | 
+ workers    | numeric                     |           |          |                                                | main     |              | 
+ ac_tot     | numeric                     |           |          |                                                | main     |              | 
+ ac_water   | numeric                     |           |          |                                                | main     |              | 
+ ac_land    | numeric                     |           |          |                                                | main     |              | 
+ ac_unpr    | numeric                     |           |          |                                                | main     |              | 
+ d2a_ephhm  | numeric                     |           |          |                                                | main     |              | 
+ d2b_e8mixa | numeric                     |           |          |                                                | main     |              | 
+ d3b        | numeric                     |           |          |                                                | main     |              | 
+ d4a        | numeric                     |           |          |                                                | main     |              | 
+ d2a_ranked | bigint                      |           |          |                                                | plain    |              | 
+ d2b_ranked | bigint                      |           |          |                                                | plain    |              | 
+ d4a_ranked | bigint                      |           |          |                                                | plain    |              | 
+ d3b_ranked | bigint                      |           |          |                                                | plain    |              | 
+ walkindex  | numeric                     |           |          |                                                | main     |              | 
+ shape_leng | numeric                     |           |          |                                                | main     |              | 
+ shape_area | numeric                     |           |          |                                                | main     |              | 
+ geom       | geometry(MultiPolygon,4269) |           |          |                                                | main     |              | 
+Indexes:
+    "walkability_index_pkey" PRIMARY KEY, btree (gid)
+    "walkability_index_geom_idx" gist (geom)
+
+12. Shapefile for Census Tracts in Durham County
+                                                         Table "public.cb_2016_37_tract_500k"
+  Column  |          Type          | Collation | Nullable |                      Default                       | Storage  | Stats target | Description 
+----------+------------------------+-----------+----------+----------------------------------------------------+----------+--------------+-------------
+ gid      | integer                |           | not null | nextval('cb_2016_37_tract_500k_gid_seq'::regclass) | plain    |              | 
+ statefp  | character varying(2)   |           |          |                                                    | extended |              | 
+ countyfp | character varying(3)   |           |          |                                                    | extended |              | 
+ tractce  | character varying(6)   |           |          |                                                    | extended |              | 
+ affgeoid | character varying(20)  |           |          |                                                    | extended |              | 
+ geoid    | character varying(11)  |           |          |                                                    | extended |              | 
+ name     | character varying(100) |           |          |                                                    | extended |              | 
+ lsad     | character varying(2)   |           |          |                                                    | extended |              | 
+ aland    | double precision       |           |          |                                                    | plain    |              | 
+ awater   | double precision       |           |          |                                                    | plain    |              | 
+ geom     | geometry(MultiPolygon) |           |          |                                                    | main     |              | 
+Indexes:
+    "cb_2016_37_tract_500k_pkey" PRIMARY KEY, btree (gid)
+    "cb_2016_37_tract_500k_geom_idx" gist (geom)
+
+
