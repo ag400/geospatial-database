@@ -1,5 +1,5 @@
 # geospatial-database
-This project using postgresql to construct geospatial database. The below are tutorial for creating and backing up database by typing the command lines in the terminal.
+This project uses postgresql to construct geospatial database. The below are tutorial for creating and backing up database by typing the command lines in the terminal.
 ### Install postgresql version 9.6
 ```console
 aijing@aijing-X555LAB:~$ sudo apt-get install postgresql-9.6
